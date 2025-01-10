@@ -22,8 +22,8 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: "YOOM - Page d'acceuil du site",
-  description: "Plateforme web gratuite de conférence vidéo pour les particuliers et les entreprises.",
+  title: "test",
+  description: "test",
   icons: {
     icon: "/logo/logo.svg",
   },

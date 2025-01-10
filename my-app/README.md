@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YOOM Sass Avec Next.js 14, App Router, React, Tailwind, Shadcn, Aceternity, Frame motion 2024.
 
-## Getting Started
 
-First, run the development server:
+- Landing Page
+![Screenshot](https://github.com/sylvaincodes/screenshots_for_app/blob/main/yoom.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Dashboard
+![Screenshot](https://github.com/sylvaincodes/screenshots_for_app/blob/main/yoom-dashboard.jpg)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Liens du projets
 
-## Learn More
+- Demo : https://yoom-app.netlify.app/
+- Github : [https://github.com/sylvaincodes/yoom/](https://github.com/sylvaincodes/yoom)
 
-To learn more about Next.js, take a look at the following resources:
+# Etapes de développement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Installation du projet avec next js
+- Installation des dépendances ( shadcn )
+- Structuration du projet
+- Installation du kit UI ( couleurs, fonts, media-queries )
+- Configuration seo ( seo global, openGraph)
+- Configuration Layout ( RootLayout et Layout des pages )
++ Création des composants
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    - Landing page
+    - Auth clerk (  Sign in , Log in )
+    - Dashboard ( Header, Footer, Sidebar, Main content, Meeting actions)
+    - Meeting page
+    - Hook Get Data from API
+    - Set Provider StreamVideo
+    - Generate a token 
+    - Use Api , 
+    - Meeting Item
+    - Personal page
+    - Meeting [id] page
+    - Record Meeting
+    - Join A Hote
+    - End call
+    - Test
+    - Deploy to Netlify
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

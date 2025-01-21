@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: mergeOpenGraph({
-    title: 'YOOM - Page d\'acceuil du site',
+    title: 'test- Page d\'acceuil du site',
     url: '/',
   }),
 

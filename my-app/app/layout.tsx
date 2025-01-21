@@ -5,8 +5,14 @@ import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import { mergeOpenGraph } from "@/lib/mergeOpenGraph";
 
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
-//SEO GLOBAL
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL ||  'http://localhost:3000/'),
   applicationName:'YOOM app',
@@ -31,7 +37,7 @@ export const metadata: Metadata = {
     }
   },
 
-  manifest: `  ${process.env.NEXT_PUBLIC_SERVER_URL}/manifest.json`,
+  manifest: `${process.env.NEXT_PUBLIC_SERVER_URL}/manifest.json`,
 
   icons:{
     icon:"/logo/logo.png",
@@ -45,22 +51,28 @@ export const metadata: Metadata = {
     description: 'YOOM App : Plateforme web gratuite de service de vidéo conférence pour les particuliers et les entreprises.',
     siteId:'',
     creator:'sylvaincodes',
-    images:[` ${process.env.NEXT_PUBLIC_SERVER_URL}/logo/logo.png`]
+    images:[`${process.env.NEXT_PUBLIC_SERVER_URL}/logo/logo.png`]
   },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="fr">
-      <body className={cn('animate-loading-transition min-h-screen overflow-hidden', ibm.className)} >
-
-        {children}
-
-      </body>
-    </html>
-  );
+    <ClerkProvider>
+      <html lang="fr">
+        <body className={cn('animate-loading-transition min-h-screen overflow-hidden', ibm.className)} >
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
+  )
 }
